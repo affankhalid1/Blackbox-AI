@@ -1,0 +1,17 @@
+# PyTorch with CUDA 12.1
+# torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# Other packages
+pyaudio
+numpy
+psycopg2-binary
+pgvector
+speechbrain
+pydantic
+pydantic-settings
+colorlog
+python-dotenv
+pyannote.audio
+streamlit
+faster-whisper
+"huggingface_hub<0.25.0"
