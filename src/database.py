@@ -99,5 +99,25 @@ class DatabaseClient:
             logger.error(f"Failed to save user {name}: {e}")
             return False
 
+    def save_transcript(self, speaker_id: int, text_content: str) -> bool:
+        """
+        Saves a command/transcript linked to a specific user.
+        """
+        try:
+            with self.get_connection() as conn:
+                with conn.cursor() as cur:
+                    query = """
+                        INSERT INTO transcripts (speaker_id, text_content, created_at)
+                        VALUES (%s, %s, NOW())
+                        RETURNING id;
+                    """
+                    cur.execute(query, (speaker_id, text_content))
+                    transcript_id = cur.fetchone()[0]
+                    logger.info(f"Transcript saved | ID: {transcript_id} | User: {speaker_id}")
+                    return True
+        except Exception as e:
+            logger.error(f"Failed to save transcript: {e}")
+            return False
+
 # Export a singleton instance for use across the app
 db_client = DatabaseClient()

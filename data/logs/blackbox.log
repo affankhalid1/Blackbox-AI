@@ -143,3 +143,9 @@
 2025-12-29 07:28:42 AM | INFO     | Audio_Capture   | Recording... target: data\temp\auth_attempt.wav
 2025-12-29 07:29:27 AM | DEBUG    | AI_Speaker_Engine | Extracting embedding for: D:/Affan/Blackbox AI/data/temp/auth_attempt.wav
 2025-12-29 07:29:29 AM | INFO     | Auth_UI         | Auth Attempt: Closest match Affan with distance 0.0804
+2026-01-06 08:17:40 AM | INFO     | AI_Speaker_Engine | Initializing SpeechBrain Encoder (ECAPA-TDNN)...
+2026-01-06 08:17:43 AM | INFO     | AI_Speaker_Engine | Speaker Engine loaded on: GPU (CUDA)
+2026-01-06 08:17:44 AM | INFO     | AI_Transcriber  | Loading Whisper Model (medium) on cuda...
+2026-01-06 08:32:58 AM | INFO     | AI_Transcriber  | Whisper Model loaded successfully.
+2026-01-06 08:33:53 AM | INFO     | Audio_Capture   | Capture started at 2026-01-06 08:33:53 AM
+2026-01-06 08:33:53 AM | INFO     | Audio_Capture   | Recording... target: data\temp\cli_ingest.wav
